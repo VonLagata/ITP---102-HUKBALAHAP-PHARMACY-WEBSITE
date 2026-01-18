@@ -142,7 +142,12 @@ header{
     font-size: 3.5rem;
     color: var(--text-color);
     margin: 1.5rem 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    color: var(--text-color);
+    margin: 1.5rem 0;
 }
+
 
 .hero-content p {
     color: #374151;
