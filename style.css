@@ -385,6 +385,14 @@ footer {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    .about-us{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-us-img-box{
+        width: 100%;
+        height: 30%;
+    }
 
 }
 
