@@ -6,10 +6,20 @@
 }
 
 :root {
-    --primary-color: rgb(0, 172, 0);
-    --secondary-color: white;
-    --text-color: rgb(35, 116, 3);
-    --border-color: rgb(59, 245, 59) ;
+    --primary-color: rgb(0, 172, 0);         /* Your bright green for accents */
+    --secondary-color: white;               /* Pure white background */
+    --text-color: #064e3b;                  /* Your deep green for headings */
+    --text-muted: #4b6354;                  /* A softer version for paragraphs */
+    --border-color: rgba(0, 170, 0, 0.2);   /* Softened your border color for elegance */
+    --background-card-color: #f0fdf4;       /* Your soft mint background */
+    --button-color: rgb(28, 105, 63);       /* Your solid action green */
+}
+
+.grid-container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto ;
 }
 
 /* NAVIGATION BAR */
@@ -19,24 +29,33 @@ header{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* NAVIGATION LOGO */
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo img{
-    width: 4rem;
-    height: 4rem;
-}
-
 .navbar{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
     
+}
+
+/* NAVIGATION LOGO */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 3.9rem;
+    height: 3.9rem;
+    font-size: 1.4rem;
+}
+
+.logo h3{
+    color: var(--text-color);
 }
 
 /* NAVIGATION LINKS */
@@ -55,16 +74,14 @@ header{
     font-weight: 700;
 }
 
-
 /* NAVIGATION SEARCH */
-
 .search-bar{
     display: flex;
 }
 
 .search-bar input{
     flex: 1;
-    padding: 0.4rem 0.5rem;
+    padding: 0.4rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 20px 0 0 20px;
     outline: none;
@@ -79,10 +96,9 @@ header{
     border-radius: 0 20px 20px 0;
     padding: 0.6rem 0.7rem;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     border-radius: 0 20px 20px 0;
-    cursor: pointer; 
-    transition: opacity 0.2s ease;
+    cursor: pointer;
 }
 
 .search-bar button img{
@@ -92,15 +108,93 @@ header{
 }
 
 
+/* MAIN CONTENT */
+.main-content{
+    padding: 2rem 1rem;
+}
 
-@media (min-width: 480px) {
+.hero-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 80vh;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--background-card-color);
+}
+
+/* LEFT SIDE PART */
+.hero-content{
+    padding-right: 2rem;
+}
+
+.hero-content .badge{
+    color: var(--primary-color);
+    background: #dcfce7;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.hero-content h1{
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin: 1.5rem 0;
+}
+
+.hero-content p {
+    color: #374151;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* HERO IMAGE */
+.hero-img-box img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+/* HERO BUTTONS */
+.hero-buttons{
+    display: flex;
+    gap: 1.7rem;
+}
+
+.btn-primary, .btn-outline{
+    padding: 1rem 2rem;
     
 }
 
-@media (min-width: 768px) {
+.btn-primary{
+    background-color: var(--button-color);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid var(--button-color);
+    color: var(--button-color);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
     
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 1024px) {
     
 }
